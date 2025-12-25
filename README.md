@@ -1,19 +1,18 @@
+# Chinese Phrasebook
 
-# Pinpoint
-
-Pinpoint is a geography guessing game built with React, TypeScript, and Tailwind CSS. Players are presented with a random location and must guess where it is on the map. The app provides feedback on accuracy, tracks player statistics, and supports saving and reviewing locations.
+A mobile-friendly Chinese phrasebook and vocabulary trainer built with React, TypeScript, and Tailwind CSS. Designed for travelers, students, and anyone learning Chinese, this app provides quick access to essential phrases and vocabulary for real-life situations.
 
 ## Features
 
-- Random location puzzles using real-world map data
-- Interactive satellite and world maps
-- Place a guess and receive accuracy feedback
-- Zoom controls for map detail (zoom usage affects scoring)
-- Performance tiers based on guess accuracy
-- Statistics panel: rounds played, best/worst/median distances, countries visited, continent distribution
-- Save and review locations
-- Light/dark theme with system detection
-- Fast, animated user interface
+- **Situational Phrasebook:** Browse curated Chinese phrases organized by real-world situations (e.g., food, transport, emergencies), each with icons and color coding.
+- **Phrase Filtering:** Instantly filter phrases by tags such as "polite," "urgent," or "payment" for fast access.
+- **Phrase Saving:** Save your favorite phrases for quick reference and manage your saved list.
+- **Basics Vocabulary:** Access categorized essential vocabulary (numbers, greetings, etc.) with search and tag filtering.
+- **Search:** Search phrases and vocabulary by Chinese, pinyin, or English.
+- **Flashcards:** Practice and memorize vocabulary with a built-in flashcard mode.
+- **Responsive Design:** Optimized for both mobile and desktop, with a clean, centered layout.
+- **Theme Toggle:** Switch between dark and light modes.
+- **Navigation:** Easy navigation with a bottom nav bar and clear headers.
 
 ## Getting Started
 
