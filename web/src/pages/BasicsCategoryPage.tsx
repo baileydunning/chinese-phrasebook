@@ -76,7 +76,7 @@ const BasicsCategoryPage = () => {
     <div className="min-h-screen bg-background pb-24">
       <Header title={category.name} showBack />
       
-      <main className="px-4 py-4">
+      <main className="px-4 py-4 max-w-lg mx-auto">
         {/* Search bar */}
         <div className="relative mb-4">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
