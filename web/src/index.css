@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Warm, calming palette - sage green accent */
+    --background: 40 20% 98%;
+    --foreground: 220 15% 15%;
+
+    --card: 40 15% 99%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 40 15% 99%;
+    --popover-foreground: 220 15% 15%;
+
+    /* Sage green - calming, trustworthy */
+    --primary: 150 25% 35%;
+    --primary-foreground: 40 20% 98%;
+
+    --secondary: 40 12% 94%;
+    --secondary-foreground: 220 15% 25%;
+
+    --muted: 40 10% 92%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 150 20% 92%;
+    --accent-foreground: 150 25% 30%;
+
+    /* Emergency red - for panic button */
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 150 25% 35%;
+
+    --radius: 0.75rem;
+
+    /* Chinese text specific */
+    --chinese: 220 20% 12%;
+    --pinyin: 220 15% 40%;
+    --english: 220 10% 55%;
+
+    /* Situation card colors */
+    --situation-food: 25 85% 55%;
+    --situation-transport: 210 70% 50%;
+    --situation-hotel: 280 45% 55%;
+    --situation-shopping: 340 65% 55%;
+    --situation-emergency: 0 70% 55%;
+    --situation-social: 150 50% 45%;
+    --situation-dating: 330 55% 55%;
+    --situation-weather: 195 80% 50%;
+    --situation-nature: 120 45% 45%;
+    --situation-tech: 260 60% 55%;
+    --situation-facilities: 35 75% 50%;
+    --situation-attractions: 45 90% 50%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 15% 15% / 0.03);
+    --shadow-md: 0 4px 6px -1px hsl(220 15% 15% / 0.05), 0 2px 4px -2px hsl(220 15% 15% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(220 15% 15% / 0.08), 0 4px 6px -4px hsl(220 15% 15% / 0.08);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 40 15% 95%;
+
+    --card: 220 18% 13%;
+    --card-foreground: 40 15% 95%;
+
+    --popover: 220 18% 13%;
+    --popover-foreground: 40 15% 95%;
+
+    --primary: 150 30% 50%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 40 15% 90%;
+
+    --muted: 220 12% 20%;
+    --muted-foreground: 40 10% 60%;
+
+    --accent: 150 20% 18%;
+    --accent-foreground: 150 30% 70%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 150 30% 50%;
+
+    --chinese: 40 15% 95%;
+    --pinyin: 40 10% 70%;
+    --english: 40 8% 55%;
+
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.2);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -2px hsl(0 0% 0% / 0.2);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -4px hsl(0 0% 0% / 0.3);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Typography for phrase display */
+  .chinese-text {
+    @apply font-chinese text-chinese leading-relaxed;
+  }
+
+  .pinyin-text {
+    @apply font-sans text-pinyin leading-relaxed tracking-wide;
+  }
+
+  .english-text {
+    @apply font-sans text-english leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Situation card hover states */
+  .situation-card {
+    @apply transition-all duration-200 ease-out;
+  }
+
+  .situation-card:hover {
+    @apply scale-[1.02];
+    box-shadow: var(--shadow-lg);
+  }
+
+  .situation-card:active {
+    @apply scale-[0.98];
+  }
+
+  /* Phrase card */
+  .phrase-card {
+    @apply bg-card rounded-xl p-5 border border-border/50;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease-out;
+  }
+
+  .phrase-card:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Panic button pulse */
+  .panic-pulse {
+    animation: panic-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes panic-pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 hsl(var(--destructive) / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 12px hsl(var(--destructive) / 0);
+    }
+  }
+
+  /* Audio button ripple */
+  .audio-ripple {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .audio-ripple::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.2) 0%, transparent 70%);
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  }
+
+  .audio-ripple.playing::after {
+    transform: scale(2);
+    opacity: 1;
+  }
+
+  /* Bottom navigation */
+  .nav-item {
+    @apply flex flex-col items-center gap-1 py-2 px-4 rounded-xl transition-all duration-200;
+  }
+
+  .nav-item.active {
+    @apply bg-accent text-accent-foreground;
+  }
+
+  .nav-item:not(.active):hover {
+    @apply bg-muted/50;
+  }
+}
+
+@layer utilities {
+  .text-chinese-lg {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+
+  .text-chinese-xl {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+
+  .text-chinese-2xl {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  /* Safe area for mobile */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 1rem);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top, 0);
+  }
+
+  /* 3D Flashcard utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
